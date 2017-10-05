@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supershop.StockKeeperUIController">
+   <children>
+      <HBox layoutX="6.0" prefHeight="474.0" prefWidth="746.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="474.0" prefWidth="235.0">
+               <children>
+                  <GridPane prefHeight="210.0" prefWidth="241.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="148.0" text="New Supplier Information" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                        <Label text="ID" GridPane.rowIndex="1" />
+                        <Label text="Name" GridPane.rowIndex="2" />
+                        <Label text="Contact" GridPane.rowIndex="3" />
+                        <Label text="Address" GridPane.rowIndex="4" />
+                        <TextField fx:id="supplierIdField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="supplierNameField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="supplierContactField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="supplierAddressField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" onAction="#handleSupplierAddAction" prefHeight="25.0" prefWidth="81.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <GridPane prefHeight="319.0" prefWidth="232.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="New Product Information" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                        <Label text="Product ID" GridPane.rowIndex="1" />
+                        <Label text="Product Name" GridPane.rowIndex="2" />
+                        <Label prefHeight="17.0" prefWidth="79.0" text="Product Type" GridPane.rowIndex="3" />
+                        <Label prefHeight="17.0" prefWidth="80.0" text="UnitPrice(Buy)" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" onAction="#handleAddProductAction" prefHeight="25.0" prefWidth="99.0" text="Add  Product" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                        <TextField fx:id="productIdField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="productNameField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="productTypeField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="productBuyUnitpriceField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                        <Label text="Supplier ID" GridPane.rowIndex="7" />
+                        <TextField fx:id="productSupplierIdField" prefHeight="25.0" prefWidth="97.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                        <Label text="UnitPrice(Sell)" GridPane.rowIndex="5" />
+                        <TextField fx:id="productSellUnitpriceField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                        <Label text="Unit " GridPane.rowIndex="6" />
+                        <TextField fx:id="productUnitField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <Button mnemonicParsing="false" onAction="#handleLogOutAction" text="Logout" />
+               </children>
+            </VBox>
+            <VBox prefHeight="518.0" prefWidth="274.0">
+               <children>
+                  <GridPane prefHeight="218.0" prefWidth="250.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Suppliers List " GridPane.columnIndex="1" />
+                        <TableView fx:id="SupplierTableView" onMouseClicked="#handleMouseClickSupplierAction" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="4">
+                          <columns>
+                            <TableColumn fx:id="supplierIDColumn" prefWidth="48.0" text="ID" />
+                            <TableColumn fx:id="supplierNameColumn" prefWidth="72.0" text="Name" />
+                              <TableColumn fx:id="supplierContactColumn" prefWidth="64.0" text="Contact" />
+                              <TableColumn fx:id="supplierAddressColumn" prefWidth="89.0" text="Address" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="SelectSupplierButton" disable="true" mnemonicParsing="false" onAction="#handleSupplierSelectAction" text="Select Supplier" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                        <Button fx:id="RemoveSupplierButton" disable="true" mnemonicParsing="false" onAction="#handleRemoveSupplierAction" text="Remove" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <GridPane prefHeight="230.0" prefWidth="247.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Products List" GridPane.columnIndex="1" />
+                        <TableView fx:id="ProductTableView" onMouseClicked="#handleProductSelectionAction" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="4">
+                          <columns>
+                            <TableColumn fx:id="productIdColumn" prefWidth="82.0" text="ID" />
+                            <TableColumn fx:id="productNameColumn" prefWidth="122.0" text="Name" />
+                              <TableColumn fx:id="productUnitColumn" prefWidth="69.0" text="Unit Exist" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="SelectProductButton" disable="true" mnemonicParsing="false" onAction="#handleProductSelectAction" text="Select Product" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                        <Button fx:id="RemoveProductButton" disable="true" mnemonicParsing="false" onAction="#handleRemoveProductAction" text="Remove" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <GridPane prefHeight="112.0" prefWidth="273.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="101.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="81.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="33.0" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="New Suggestions" />
+                        <TableView fx:id="SuggestionTableView" onMouseClicked="#handleSuggestionSelectaction" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowSpan="4">
+                          <columns>
+                            <TableColumn fx:id="suggestionProductNameColumn" prefWidth="90.0" text="Product Name" />
+                            <TableColumn fx:id="suggestionProductTypeColumn" prefWidth="85.0" text="Product Type" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="DoneAddingButton" disable="true" mnemonicParsing="false" onAction="#handleRemoveSuggestionAction" text="Done" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="518.0" prefWidth="252.0">
+               <children>
+                  <GridPane prefHeight="198.0" prefWidth="253.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Empty Products List " GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                        <TableView fx:id="EmptyProductTable" onMouseClicked="#handleEmptyProductClickAction" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="4">
+                          <columns>
+                            <TableColumn fx:id="EmptyProductIdColumn" prefWidth="65.0" text="ID" />
+                            <TableColumn fx:id="EmptyProductNameColumn" prefWidth="104.0" text="Name" />
+                              <TableColumn fx:id="EmptyProductSupplierIdColumn" prefWidth="82.0" text="Supplier ID" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="EmptyItemSelectbutton" disable="true" mnemonicParsing="false" onAction="#handleSelectEmptyProductAction" text="Select Item" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Button fx:id="RemoveEmptyButton" disable="true" mnemonicParsing="false" onAction="#handleRemoveEmptyProductAction" text="Remove" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Supplier " GridPane.columnIndex="1" />
+                        <Label text="Product" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ListView fx:id="SupplierListView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="3" />
+                        <ListView fx:id="productListView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5" GridPane.rowSpan="3" />
+                        <Label text="Unit of Product" GridPane.rowIndex="8" />
+                        <TextField fx:id="unitNumberProductField" onKeyPressed="#handleUnitProductButKeyAction" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                        <Label text="Total Cost" GridPane.rowIndex="9" />
+                        <ListView fx:id="CostView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+                        <Button fx:id="CostCountButton" disable="true" mnemonicParsing="false" onAction="#handleCostCountAction" text="Cost Count" GridPane.rowIndex="10" />
+                        <Button fx:id="BuyButton" disable="true" mnemonicParsing="false" onAction="#handleBuyAction" text="Buy" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <Button mnemonicParsing="false" onAction="#handleClearAction" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

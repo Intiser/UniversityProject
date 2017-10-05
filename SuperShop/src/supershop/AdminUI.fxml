@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="413.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supershop.AdminUIController">
+   <children>
+      <HBox layoutX="9.0" prefHeight="413.0" prefWidth="579.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane prefHeight="411.0" prefWidth="673.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Home">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ToolBar layoutX="355.0" layoutY="34.0" prefHeight="40.0" prefWidth="200.0">
+                                <items>
+                                  <Button mnemonicParsing="false" onAction="#handleManagerViewAction" prefHeight="25.0" prefWidth="188.0" text="Manager View" />
+                                </items>
+                              </ToolBar>
+                              <ToolBar layoutX="355.0" layoutY="143.0" prefHeight="40.0" prefWidth="200.0">
+                                <items>
+                                  <Button mnemonicParsing="false" onAction="#handleStockKeeperViewAction" prefHeight="25.0" prefWidth="188.0" text="StockKeeper View" />
+                                </items>
+                              </ToolBar>
+                              <ToolBar layoutX="355.0" layoutY="247.0" prefHeight="40.0" prefWidth="200.0">
+                                <items>
+                                  <Button mnemonicParsing="false" onAction="#handleSalesmenViewAction" prefHeight="25.0" prefWidth="188.0" text="Salesmen View" />
+                                </items>
+                              </ToolBar>
+                              <Label layoutX="14.0" layoutY="37.0" prefHeight="35.0" prefWidth="309.0" text="To See Transaction or Manager's View :">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="146.0" prefHeight="35.0" prefWidth="309.0" text="To See Stocks and Suppliers or StockKeeperView:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="250.0" prefHeight="35.0" prefWidth="309.0" text="To See Customers and Salesmen View: ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="503.0" layoutY="339.0" mnemonicParsing="false" onAction="#handleLogOutAction" text="Logout" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Create Account">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox layoutX="14.0" layoutY="14.0" prefHeight="384.0" prefWidth="579.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox prefHeight="384.0" prefWidth="290.0">
+                                       <children>
+                                          <GridPane prefHeight="271.0" prefWidth="295.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label text="Create New Profile" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                                                <ComboBox fx:id="CreateBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                                <Label text="User Id" GridPane.rowIndex="2" />
+                                                <Label text="User Name" GridPane.rowIndex="3" />
+                                                <Label text="Password" GridPane.rowIndex="4" />
+                                                <TextField fx:id="UserIdField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                <TextField fx:id="UserNameField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                                <Button mnemonicParsing="false" onAction="#handleAddAction" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <PasswordField fx:id="UserPasswordField" prefHeight="25.0" prefWidth="131.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Account Settings">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox layoutX="96.0" layoutY="24.0" prefHeight="384.0" prefWidth="579.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox prefHeight="320.0" prefWidth="326.0">
+                                       <children>
+                                          <Label prefHeight="27.0" prefWidth="406.0" text="User List of Super Shop  Selling System:">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="UserTableView" onMouseClicked="#handleSelectAction" prefHeight="268.0" prefWidth="409.0">
+                                            <columns>
+                                              <TableColumn fx:id="DesignationColumn" prefWidth="82.0" text="Designation" />
+                                              <TableColumn fx:id="UserIdColumn" prefWidth="105.0" text="User Id" />
+                                                <TableColumn fx:id="UserNameColumn" prefWidth="138.0" text="User Name" />
+                                            </columns>
+                                          </TableView>
+                                          <ToolBar prefHeight="40.0" prefWidth="200.0">
+                                            <items>
+                                                <Button fx:id="RemoveButton" disable="true" mnemonicParsing="false" onAction="#handleRemoveAction" prefHeight="25.0" prefWidth="104.0" text="Remove " />
+                                              <Button fx:id="SelectButton" disable="true" mnemonicParsing="false" onAction="#handleSelecUsertAction" text="Select" />
+                                            </items>
+                                          </ToolBar>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="384.0" prefWidth="252.0">
+                                       <children>
+                                          <GridPane prefHeight="274.0" prefWidth="257.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label text="Edit Selected Profile" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                                                <ComboBox fx:id="EditBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                                <Label text="User Id" GridPane.rowIndex="2" />
+                                                <Label text="User Name" GridPane.rowIndex="3" />
+                                                <Label text="Password" GridPane.rowIndex="4" />
+                                                <TextField fx:id="EditId" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                <TextField fx:id="EditName" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                                <Button fx:id="UpdateButton" disable="true" mnemonicParsing="false" onAction="#handleUserUpdateAction" text="Update" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <PasswordField fx:id="EditPassField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
