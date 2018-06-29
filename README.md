@@ -1,1 +1,1 @@
-# VersityProjects
+# University Projects
