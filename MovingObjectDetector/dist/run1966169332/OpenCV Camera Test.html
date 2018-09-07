@@ -1,0 +1,47 @@
+<html><head>
+  <SCRIPT src="./web-files/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'OpenCV Camera Test.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJPcGVuQ1YgQ2FtZXJhIFRlc3Quam5scCI+CiAgPGluZm9ybWF0aW9uPgogICAgPHRpdGxlPk9wZW5DViBDYW1lcmEgVGVzdDwvdGl0bGU+CiAgICA8dmVuZG9yPmttaGFzYW48L3ZlbmRvcj4KICAgIDxkZXNjcmlwdGlvbj5udWxsPC9kZXNjcmlwdGlvbj4KICAgIDxvZmZsaW5lLWFsbG93ZWQvPgogIDwvaW5mb3JtYXRpb24+CiAgPHJlc291cmNlcz4KICAgIDxqMnNlIHZlcnNpb249IjEuNisiIGphdmEtdm0tYXJncz0iLURqYXZhLmxpYnJhcnkucGF0aD0vaG9tZS9zdHVkZW50L0Rvd25sb2Fkcy9vcGVuY3Yub3JpZ2luYWwvYnVpbGQvbGliICIgIGhyZWY9Imh0dHA6Ly9qYXZhLnN1bi5jb20vcHJvZHVjdHMvYXV0b2RsL2oyc2UiLz4KICAgIDxqYXIgaHJlZj0ibGliL29wZW5jdi0zMTAuamFyIiBzaXplPSIzMTI3MjgiIGRvd25sb2FkPSJlYWdlciIgLz4KICA8L3Jlc291cmNlcz4KICA8YXBwbGV0LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjb20uamF2YWZ4Lm1haW4uTm9KYXZhRlhGYWxsYmFjayIgIG5hbWU9Ik9wZW5DViBDYW1lcmEgVGVzdCIgPgogICAgPHBhcmFtIG5hbWU9InJlcXVpcmVkRlhWZXJzaW9uIiB2YWx1ZT0iOC4wKyIvPgogIDwvYXBwbGV0LWRlc2M+CiAgPGpmeDpqYXZhZngtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9Im9wZW5jdi5jYW1lcmEudGVzdC5PcGVuQ1ZDYW1lcmFUZXN0IiAgbmFtZT0iT3BlbkNWIENhbWVyYSBUZXN0IiAvPgogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPgo8L2pubHA+Cg=='
+            },
+            {
+                javafx : '8.0+',
+                jvmargs : '-Djava.library.path=/home/student/Downloads/opencv.original/build/lib '
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedopencv.camera.test() {
+        dtjava.embed(
+            {
+                id : 'opencv.camera.test',
+                url : 'OpenCV Camera Test.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJPcGVuQ1YgQ2FtZXJhIFRlc3Quam5scCI+CiAgPGluZm9ybWF0aW9uPgogICAgPHRpdGxlPk9wZW5DViBDYW1lcmEgVGVzdDwvdGl0bGU+CiAgICA8dmVuZG9yPmttaGFzYW48L3ZlbmRvcj4KICAgIDxkZXNjcmlwdGlvbj5udWxsPC9kZXNjcmlwdGlvbj4KICAgIDxvZmZsaW5lLWFsbG93ZWQvPgogIDwvaW5mb3JtYXRpb24+CiAgPHJlc291cmNlcz4KICAgIDxqMnNlIHZlcnNpb249IjEuNisiIGphdmEtdm0tYXJncz0iLURqYXZhLmxpYnJhcnkucGF0aD0vaG9tZS9zdHVkZW50L0Rvd25sb2Fkcy9vcGVuY3Yub3JpZ2luYWwvYnVpbGQvbGliICIgIGhyZWY9Imh0dHA6Ly9qYXZhLnN1bi5jb20vcHJvZHVjdHMvYXV0b2RsL2oyc2UiLz4KICAgIDxqYXIgaHJlZj0ibGliL29wZW5jdi0zMTAuamFyIiBzaXplPSIzMTI3MjgiIGRvd25sb2FkPSJlYWdlciIgLz4KICA8L3Jlc291cmNlcz4KICA8YXBwbGV0LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjb20uamF2YWZ4Lm1haW4uTm9KYXZhRlhGYWxsYmFjayIgIG5hbWU9Ik9wZW5DViBDYW1lcmEgVGVzdCIgPgogICAgPHBhcmFtIG5hbWU9InJlcXVpcmVkRlhWZXJzaW9uIiB2YWx1ZT0iOC4wKyIvPgogIDwvYXBwbGV0LWRlc2M+CiAgPGpmeDpqYXZhZngtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9Im9wZW5jdi5jYW1lcmEudGVzdC5PcGVuQ1ZDYW1lcmFUZXN0IiAgbmFtZT0iT3BlbkNWIENhbWVyYSBUZXN0IiAvPgogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPgo8L2pubHA+Cg=='
+            },
+            {
+                javafx : '8.0+',
+                jvmargs : '-Djava.library.path=/home/student/Downloads/opencv.original/build/lib '
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedopencv.camera.test);
+</script>
+
+</head><body>
+<h2>Test page for <b>OpenCV Camera Test</b></h2>
+  <b>Webstart:</b> <a href='OpenCV Camera Test.jnlp' onclick="return launchApplication('OpenCV Camera Test.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

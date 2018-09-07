@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="OpenCV Camera Test.jnlp">
+  <information>
+    <title>OpenCV Camera Test</title>
+    <vendor>kmhasan</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-Djava.library.path=/home/student/Downloads/opencv.original/build/lib "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib/opencv-310.jar" size="312728" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="OpenCV Camera Test" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="opencv.camera.test.OpenCVCameraTest"  name="OpenCV Camera Test" />
+  <update check="always"/>
+</jnlp>
