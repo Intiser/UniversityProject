@@ -56,4 +56,4 @@ Point of Sales for SalesMen.
 
 ## AUTHOR
 
-** Syed Intiser Ahsan **
+***Syed Intiser Ahsan***
